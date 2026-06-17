@@ -94,6 +94,11 @@ export const stages = {
         label: "End Call as Callback Scheduled",
         next: "completed_callback",
       },
+      // {
+      //   label: "Objection",
+      //   next: "objection_selector",
+      //   color: "yellow",
+      // },
     ],
   },
 
@@ -180,11 +185,16 @@ export const stages = {
         next: "schedule",
         color: "green",
       },
-      {
-        label: "Meeting Declined",
-        next: "closed_lost",
-        color: "red",
-      },
+      // {
+      //   label: "Meeting Declined",
+      //   next: "closed_lost",
+      //   color: "red",
+      // },
+      // {
+      //   label: "Objection",
+      //   next: "objection_selector",
+      //   color: "yellow",
+      // },
     ],
   },
 
@@ -258,11 +268,16 @@ export const stages = {
         next: "confirm_access",
         color: "green",
       },
-      {
-        label: "Meeting Declined",
-        next: "closed_lost",
-        color: "red",
-      },
+      // {
+      //   label: "Meeting Declined",
+      //   next: "closed_lost",
+      //   color: "red",
+      // },
+      // {
+      //   label: "Objection",
+      //   next: "objection_selector",
+      //   color: "yellow",
+      // },
     ],
   },
 
@@ -392,11 +407,16 @@ export const stages = {
         next: "completed",
         color: "green",
       },
-      {
-        label: "Meeting Declined",
-        next: "closed_lost",
-        color: "red",
-      },
+      // {
+      //   label: "Meeting Declined",
+      //   next: "closed_lost",
+      //   color: "red",
+      // },
+      // {
+      //   label: "Objection",
+      //   next: "objection_selector",
+      //   color: "yellow",
+      // },
     ],
   },
 
@@ -440,5 +460,449 @@ export const stages = {
     checklist: [],
 
     actions: [],
+  },
+
+  objection_selector: {
+    id: "objection_selector",
+    title: "Objection Selector",
+
+    script: (
+      <div>
+        <p>
+          Choose the objection that best fits the prospect's response. If none
+          of the options fit, select "Other" and provide a brief description of
+          the objection.
+        </p>
+      </div>
+    ),
+
+    actions: [
+      {
+        label: "Not Interested",
+        next: "obj_not_interested",
+      },
+
+      {
+        label: "Too Busy",
+        next: "obj_too_busy",
+      },
+
+      {
+        label: "Send Email",
+        next: "obj_send_email",
+      },
+
+      {
+        label: "Already Have Online Ordering",
+        next: "obj_online_ordering",
+      },
+
+      {
+        label: "Use DoorDash/UberEats",
+        next: "obj_competitor",
+      },
+
+      {
+        label: "How Much Does It Cost?",
+        next: "obj_price",
+      },
+
+      {
+        label: "Bad Experience With BM",
+        next: "obj_bad_experience",
+      },
+
+      {
+        label: "Never Heard Of BM",
+        next: "obj_never_heard",
+      },
+    ],
+  },
+
+  obj_not_interested: {
+    id: "obj_not_interested",
+    title: "Objection: Not Interested",
+    script: (
+      <div className="space-y-1">
+        <p>
+          <h1 className="px-2 py-1 bg-yellow-600/50 text-black font-bold rounded-lg">
+            Option 1
+          </h1>
+          Totally fair.
+          <br />
+          I wasn't really expecting you to be interested yet since we haven't
+          had a chance to talk.
+          <br />
+          Let me give you a quick 15-second overview.
+        </p>
+
+        <hr />
+
+        <p>
+          <h1 className="px-2 py-1 bg-yellow-600/50 text-black font-bold rounded-lg">
+            Option 2
+          </h1>
+          I completely understand.
+          <br />
+          Can I ask what specifically you're not interested in?
+        </p>
+
+        <hr />
+
+        <p>
+          <h1 className="px-2 py-1 bg-yellow-600/50 text-black font-bold rounded-lg">
+            Option 3
+          </h1>
+          I understand.
+          <br />
+          The reason I'm reaching out is we're expanding in your area and
+          looking to partner with a few restaurants.
+        </p>
+      </div>
+    ),
+
+    actions: [
+      {
+        label: "Back To Script",
+        next: "back_to_script",
+        color: "green",
+      },
+
+      {
+        label: "Call Ended",
+        next: "closed_lost",
+        color: "red",
+      },
+    ],
+  },
+
+  obj_too_busy: {
+    id: "obj_too_busy",
+    title: "Objection: Too Busy",
+
+    script: (
+      <div>
+        <h1 className="px-2 py-1 bg-yellow-600/50 text-black font-bold rounded-lg">
+          Option 1 - DM is Busy
+        </h1>
+        I completely understand. Most restaurant owners I speak with are busy.
+        That's actually why i wnat to give you a quick 15 second overview and
+        after that maybe we can set up a time to talk when it's more convenient
+        for you.
+        <hr className="my-4" />
+        <p>
+          <h1 className="px-2 py-1 bg-yellow-600/50 text-black font-bold rounded-lg">
+            Option 2 - Future Time
+          </h1>
+          No problem at all. Sounds like today isn't ideal.
+          <br /> Would tomorrow at 3 PM or 4 PM work better?
+        </p>
+        <hr className="my-4" />
+        <p>
+          <h1 className="px-2 py-1 bg-yellow-600/50 text-black font-bold rounded-lg">
+            Option 3 - Business Benefit
+          </h1>
+          I understand. A lot of the owners we work with were looking for ways
+          to save time and automate parts of their operation.
+          <br />
+          Would tomorrow be a better time to discuss it?
+        </p>
+      </div>
+    ),
+
+    actions: [
+      {
+        label: "Back To Script",
+        next: "back_to_script",
+        color: "green",
+      },
+
+      {
+        label: "Call Ended",
+        next: "closed_lost",
+        color: "red",
+      },
+    ],
+  },
+
+  obj_send_email: {
+    id: "obj_send_email",
+    title: "Objection: Send Me An Email",
+
+    script: (
+      <div>
+        <h1 className="px-2 py-1 bg-yellow-600/50 text-black font-bold rounded-lg">
+          Option 1 - Email + Meeting Absolutely
+        </h1>
+        I will send that over. The email gives a high-level overview. The reason
+        for the 15-minute conversation is to show how it applies specifically to
+        your restaurant.
+        <hr className="my-4" />
+        <p>
+          <h1 className="px-2 py-1 bg-yellow-600/50 text-black font-bold rounded-lg">
+            Option 2 - Review Then Meet
+          </h1>
+          sure i will send you an email right now
+          <br />
+          if we set up a call tomorrow at 3 PM give you enough time to review it
+          before we connect?
+        </p>
+        <hr className="my-4" />
+        <p>
+          <h1 className="px-2 py-1 bg-yellow-600/50 text-black font-bold rounded-lg">
+            <strong>Option 3 - Informational Positioning</strong>
+          </h1>
+          Of course. The email covers the basics.
+          <br />
+          The conversation is where we determine whether this would actually
+          make sense for your restaurant.
+        </p>
+      </div>
+    ),
+
+    actions: [
+      {
+        label: "Back To Script",
+        next: "back_to_script",
+        color: "green",
+      },
+
+      {
+        label: "Call Ended",
+        next: "closed_lost",
+        color: "red",
+      },
+    ],
+  },
+
+  obj_online_ordering: {
+    id: "obj_online_ordering",
+    title: "Objection: We Already Have Online Ordering",
+
+    script: (
+      <div>
+        <h1 className="px-2 py-1 bg-yellow-600/50 text-black font-bold rounded-lg">
+          Option 1 - Customer Ownership
+        </h1>
+        Many of our partners already have online ordering. The difference is
+        that we are focused on helping restaurants own the customer relationship
+        and data instead of relying entirely on third-party platforms.
+        <hr className="my-4" />
+        <p>
+          <h1 className="px-2 py-1 bg-yellow-600/50 text-black font-bold rounded-lg">
+            Option 2 - Direct Order Growth
+          </h1>
+          Thats actually good. but The difference is that we're focused on
+          helping you drive additional direct orders and customer retention.
+        </p>
+      </div>
+    ),
+
+    actions: [
+      {
+        label: "Back To Script",
+        next: "back_to_script",
+        color: "green",
+      },
+
+      {
+        label: "Call Ended",
+        next: "closed_lost",
+        color: "red",
+      },
+    ],
+  },
+
+  obj_competitor: {
+    id: "obj_competitor",
+    title: "Objection: We Use DoorDash / Uber Eats / Grubhub",
+
+    script: (
+      <div>
+        <h1 className="px-2 py-1 bg-yellow-600/50 text-black font-bold rounded-lg">
+          Option 1 - Customer Data That's great.
+        </h1>
+        Many of our partners use DoorDash and Uber Eats. The difference is
+        BeyondMenu helps restaurants own customer data instead of renting access
+        to it.
+        <hr className="my-4" />
+        <p>
+          <h1 className="px-2 py-1 bg-yellow-600/50 text-black font-bold rounded-lg">
+            Option 2 - Direct Orders
+          </h1>
+          Most of our restaurant partners use those platforms.
+          <br />
+          What we're helping them do is drive more direct orders through Google
+          search and maps and via our app as well.
+        </p>
+        <hr className="my-4" />
+        <p>
+          <h1 className="px-2 py-1 bg-yellow-600/50 text-black font-bold rounded-lg">
+            Option 3 - Reduce Dependency
+          </h1>
+          A lot of our partners use third-party delivery apps.
+          <br />
+          What we're helping them do is reduce dependence on those channels
+          while still keeping them.
+        </p>
+      </div>
+    ),
+
+    actions: [
+      {
+        label: "Back To Script",
+        next: "back_to_script",
+        color: "green",
+      },
+
+      {
+        label: "Call Ended",
+        next: "closed_lost",
+        color: "red",
+      },
+    ],
+  },
+
+  obj_price: {
+    id: "obj_price",
+    title: "Objection: How Much Does It Cost?",
+
+    script: (
+      <div>
+        <h1 className="px-2 py-1 bg-yellow-600/50 text-black font-bold rounded-lg">
+          Option 1 - Discovery First
+        </h1>
+        That's a great question. It really depends on what makes sense for your
+        restaurant. The purpose of the meeting is to determine that.
+        <hr className="my-4" />
+        <p>
+          <h1 className="px-2 py-1 bg-yellow-600/50 text-black font-bold rounded-lg">
+            Option 2 - No Commitment
+          </h1>
+          I'm not asking you to commit to anything today.
+          <br />
+          I'm simply looking to set aside 15 minutes to see if it's worth
+          exploring.
+        </p>
+        <hr className="my-4" />
+        <p>
+          <h1 className="px-2 py-1 bg-yellow-600/50 text-black font-bold rounded-lg">
+            Option 3 - Informed Decision
+          </h1>
+          The goal of the conversation is to help you determine whether it would
+          be a fit.
+          <br />
+          Then you can decide if it's worth moving forward.
+        </p>
+      </div>
+    ),
+
+    actions: [
+      {
+        label: "Back To Script",
+        next: "back_to_script",
+        color: "green",
+      },
+
+      {
+        label: "Call Ended",
+        next: "closed_lost",
+        color: "red",
+      },
+    ],
+  },
+
+  obj_bad_experience: {
+    id: "obj_bad_experience",
+    title: "Objection: Bad Experience With BeyondMenu",
+
+    script: (
+      <div>
+        <h1 className="px-2 py-1 bg-yellow-600/50 text-black font-bold rounded-lg">
+          Option 1 - Growth Story
+        </h1>
+        I completely understand. A lot has changed since then.
+        <hr className="my-4" />
+        <p>
+          <h1 className="px-2 py-1 bg-yellow-600/50 text-black font-bold rounded-lg">
+            Option 2 - Increased Demand
+          </h1>
+          <br />
+          Since then we've grown to over 12 million diners and significantly
+          expanded our network.
+        </p>
+        <hr className="my-4" />
+        <p>
+          <h1 className="px-2 py-1 bg-yellow-600/50 text-black font-bold rounded-lg">
+            Option 3 - Why We're Calling Again
+          </h1>
+          <br />
+          That's actually one of the reasons we're reaching back out.
+          <br />
+          The company has grown significantly and expanded its network.
+        </p>
+      </div>
+    ),
+
+    actions: [
+      {
+        label: "Back To Script",
+        next: "back_to_script",
+        color: "green",
+      },
+
+      {
+        label: "Call Ended",
+        next: "closed_lost",
+        color: "red",
+      },
+    ],
+  },
+
+  obj_never_heard: {
+    id: "obj_never_heard",
+    title: "Objection: I've Never Heard Of BeyondMenu",
+
+    script: (
+      <div>
+        <h1 className="px-2 py-1 bg-yellow-600/50 text-black font-bold rounded-lg">
+          Option 1 - Credibility
+        </h1>
+        That's completely fair. We've been helping independent restaurants for
+        more than 10 years....
+        <hr className="my-4" />
+        <p>
+          <h1 className="px-2 py-1 bg-yellow-600/50 text-black font-bold rounded-lg">
+            Option 2 - Scale
+          </h1>
+          No worries. We currently work with over 15,000 restaurants
+          nationwide....
+        </p>
+        <hr className="my-4" />
+        <p>
+          <h1 className="px-2 py-1 bg-yellow-600/50 text-black font-bold rounded-lg">
+            Option 3 - Local Expansion
+          </h1>
+          That's actually one of the reasons I'm calling.
+          <br />
+          We're expanding into your area and introducing ourselves to local
+          restaurants.
+        </p>
+      </div>
+    ),
+
+    actions: [
+      {
+        label: "Back To Script",
+        next: "back_to_script",
+        color: "green",
+      },
+
+      {
+        label: "Call Ended",
+        next: "closed_lost",
+        color: "red",
+      },
+    ],
   },
 };
