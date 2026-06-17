@@ -7,28 +7,33 @@ export const stages = {
         Hi there, this is Leo Adams with Beyond Menu, how are you today?
         <div className="flex gap-3 mt-6">
           <div className="space-y-3">
-            <h1 className="px-2 py-1 bg-yellow-600/50 text-black font-bold rounded-lg">
+            <h1 className="px-2 py-1 bg-yellow-500/40 dark:bg-yellow-900/40 text-black dark:text-yellow-200 font-bold rounded-lg">
               Have DM Name
             </h1>
             <p>
               I'm looking to speak with{" "}
-              <span className="bg-yellow-500/50">[DM Name]</span>, is he/she
-              available for a quick 15 seconds?
+              <span className="bg-yellow-500/40 dark:bg-yellow-900/40 text-black dark:text-yellow-200 px-1 rounded">
+                [DM Name]
+              </span>
+              , is he/she available for a quick 15 seconds?
             </p>
             <div className="space-y-3">
-              <h1 className="px-2 py-1 bg-yellow-600/50 text-black font-bold rounded-lg">
+              <h1 className="px-2 py-1 bg-yellow-500/40 dark:bg-yellow-900/40 text-black dark:text-yellow-200 font-bold rounded-lg">
                 Wrong Person
               </h1>
               <p>No problem, maybe you can still help me out here.</p>
             </div>
           </div>
           <div className=" space-y-3">
-            <h1 className="px-2 py-1 bg-yellow-600/50 text-black font-bold rounded-lg">
+            <h1 className="px-2 py-1 bg-yellow-500/40 dark:bg-yellow-900/40 text-black dark:text-yellow-200 font-bold rounded-lg">
               Need DM Name
             </h1>
             <p>
               The reason I'm calling is that I wanted to extend an invitation to{" "}
-              <span className="bg-yellow-500/50">[Business Name]</span> to be{" "}
+              <span className="bg-yellow-500/40 dark:bg-yellow-900/40 text-black dark:text-yellow-200 px-1 rounded">
+                [Business Name]
+              </span>{" "}
+              to be{" "}
               <span className="inline-flex flex-col">
                 <span>part of our business network.</span>
                 <span className=" text-gray-500">featured on our app.</span>
@@ -75,14 +80,24 @@ export const stages = {
           ordering?
           <br />
           Great, I'll call back{" "}
-          <span className="bg-yellow-500/50">[DATE/TIME]</span>.<br /> Who
-          should I ask for?
+          <span className="bg-yellow-500/40 dark:bg-yellow-900/40 text-black dark:text-yellow-200 px-1 rounded">
+            [DATE/TIME]
+          </span>
+          .<br /> Who should I ask for?
           <br />
           alright thank you for your help{" "}
-          <span className="bg-yellow-500/50">[GK Name]</span> again im Leo with
-          Beyond Menu and I look forward to speaking with you and{" "}
-          <span className="bg-yellow-500/50">[DM Name]</span> on{" "}
-          <span className="bg-yellow-500/50">[DATE/TIME]</span>
+          <span className="bg-yellow-500/40 dark:bg-yellow-900/40 text-black dark:text-yellow-200 px-1 rounded">
+            [GK Name]
+          </span>{" "}
+          again im Leo with Beyond Menu and I look forward to speaking with you
+          and{" "}
+          <span className="bg-yellow-500/40 dark:bg-yellow-900/40 text-black dark:text-yellow-200 px-1 rounded">
+            [DM Name]
+          </span>{" "}
+          on{" "}
+          <span className="bg-yellow-500/40 dark:bg-yellow-900/40 text-black dark:text-yellow-200 px-1 rounded">
+            [DATE/TIME]
+          </span>
         </p>
       </div>
     ),
@@ -112,9 +127,11 @@ export const stages = {
           Hi, how are you doing today?
           <br /> My name is Leo Adams Im with Beyond Menus I was interested in
           extending an invitation to{" "}
-          <span className="bg-yellow-500/50">[Restaurant Name]</span> to be part
-          of our network (featured on our app) and I was told you were the right
-          person to talk to.
+          <span className="bg-yellow-500/40 dark:bg-yellow-900/40 text-black dark:text-yellow-200 px-1 rounded">
+            [Restaurant Name]
+          </span>{" "}
+          to be part of our network (featured on our app) and I was told you
+          were the right person to talk to.
           <br /> Are you familiar with Beyond Menu?
         </p>
       </div>
@@ -155,19 +172,27 @@ export const stages = {
           new places to order from.
           <br />
           and acualy We are expanding into{" "}
-          <span className="bg-yellow-500/50">[CITY AREA]</span> so are looking
-          to parner with the most desirable restaurants in the area.
+          <span className="bg-yellow-500/40 dark:bg-yellow-900/40 text-black dark:text-yellow-200 px-1 rounded">
+            [CITY AREA]
+          </span>{" "}
+          so are looking to parner with the most desirable restaurants in the
+          area.
           <br />
           We currently work with places like{" "}
-          <span className="bg-yellow-500/50">
+          <span className="bg-yellow-500/40 dark:bg-yellow-900/40 text-black dark:text-yellow-200 px-1 rounded">
             [LOCAL RESTAURANT 1]
-          </span> and{" "}
-          <span className="bg-yellow-500/50">[LOCAL RESTAURANT 2]</span> you
-          might be familiar with.
+          </span>{" "}
+          and{" "}
+          <span className="bg-yellow-500/40 dark:bg-yellow-900/40 text-black dark:text-yellow-200 px-1 rounded">
+            [LOCAL RESTAURANT 2]
+          </span>{" "}
+          you might be familiar with.
           <br />I did some research on{" "}
-          <span className="bg-yellow-500/50">[RESTAURANT NAME]</span> and
-          thought Beyond Menu would be a great fit for you thats is way i want
-          to extend an invitation.
+          <span className="bg-yellow-500/40 dark:bg-yellow-900/40 text-black dark:text-yellow-200 px-1 rounded">
+            [RESTAURANT NAME]
+          </span>{" "}
+          and thought Beyond Menu would be a great fit for you thats is way i
+          want to extend an invitation.
         </p>
       </div>
     ),
@@ -176,7 +201,7 @@ export const stages = {
       "Get Access to DM",
       "DM Identified",
       "DM Reached",
-      "Show Value",
+      "Value Proposition",
     ],
 
     actions: [
@@ -206,14 +231,18 @@ export const stages = {
       <div>
         <p>
           Great. How have you experienced it in the past?{" "}
-          <span className="bg-yellow-500/50">[LET THEM SPEAK]</span>
+          <span className="bg-yellow-500/40 dark:bg-yellow-900/40 text-black dark:text-yellow-200 px-1 rounded">
+            [LET THEM SPEAK]
+          </span>
         </p>
         <p className="mt-4">
           will We've grown now to include over 12 million diners, which has
           increased the demand we are seeing for restaurants like yours. I did
           some research on{" "}
-          <span className="bg-yellow-500/50">[RESTAURANT NAME]</span> and felt
-          like it could be a really great fit.
+          <span className="bg-yellow-500/40 dark:bg-yellow-900/40 text-black dark:text-yellow-200 px-1 rounded">
+            [RESTAURANT NAME]
+          </span>{" "}
+          and felt like it could be a really great fit.
           <br /> I wanted to get in touch with you first before I reached out to
           any competitors nearby.
         </p>
@@ -224,7 +253,7 @@ export const stages = {
       "Get Access to DM",
       "DM Identified",
       "DM Reached",
-      "Show Value",
+      "Value Proposition",
     ],
 
     actions: [
@@ -248,7 +277,10 @@ export const stages = {
           <br />
           so Is there a good time for you to set up a 10-15 minute conversation
           so we can go into the network in a little more detail <br />
-          Does tomorrow at <span className="bg-yellow-500/50">[TIME]</span>{" "}
+          Does tomorrow at{" "}
+          <span className="bg-yellow-500/40 dark:bg-yellow-900/40 text-black dark:text-yellow-200 px-1 rounded">
+            [TIME]
+          </span>{" "}
           works for you?
         </p>
       </div>
@@ -258,7 +290,7 @@ export const stages = {
       "Get Access to DM",
       "DM Identified",
       "DM Reached",
-      "Show Value",
+      "Value Proposition",
       "Schedule Meeting",
     ],
 
@@ -299,7 +331,7 @@ export const stages = {
       "Get Access to DM",
       "DM Identified",
       "DM Reached",
-      "Show Value",
+      "Value Proposition",
       "Schedule Meeting",
       "Confirm Access",
     ],
@@ -326,7 +358,7 @@ export const stages = {
       <div>
         <p>Okay cool, what's the best way for me to get in touch with them? </p>
         <div className="space-y-3 mt-4">
-          <h1 className="px-2 py-1 bg-yellow-600/50 text-black font-bold rounded-lg">
+          <h1 className="px-2 py-1 bg-yellow-500/40 dark:bg-yellow-900/40 text-black dark:text-yellow-200 font-bold rounded-lg">
             If they don't want to give contact info for the other decision maker
             make sure they are a champion
           </h1>
@@ -344,7 +376,7 @@ export const stages = {
       "Get Access to DM",
       "DM Identified",
       "DM Reached",
-      "Show Value",
+      "Value Proposition",
       "Schedule Meeting",
       "Confirm Access",
       "Confirm Schedule",
@@ -367,26 +399,32 @@ export const stages = {
       <div>
         <p>
           Great, I'll send you a calendar invite for{" "}
-          <span className="bg-yellow-500/50">[DATE/TIME]</span>.<br /> What's a
-          good email for you?
+          <span className="bg-yellow-500/40 dark:bg-yellow-900/40 text-black dark:text-yellow-200 px-1 rounded">
+            [DATE/TIME]
+          </span>
+          .<br /> What's a good email for you?
           <br /> Perfect, and I don't want to hold up the business line, what's
           a better number to reach you at?
           <div className="space-y-3 mt-4">
-            <h1 className="px-2 py-1 bg-yellow-600/50 text-black font-bold rounded-lg">
+            <h1 className="px-2 py-1 bg-yellow-500/40 dark:bg-yellow-900/40 text-black dark:text-yellow-200 font-bold rounded-lg">
               If they don't want to give email or phone
             </h1>
             <p>
               I completely understand. I just want to make sure I can reach you
               directly since I know things can get busy at the restaurant.
               <br />
-              <span className="bg-yellow-500/50">
+              <span className="bg-yellow-500/40 dark:bg-yellow-900/40 text-black dark:text-yellow-200 px-1 rounded">
                 [if still don't want to give email or phone move to call
                 complete]
               </span>
             </p>
           </div>
           <br /> Great, looking forward to speaking with you for 10-15 minutes
-          on <span className="bg-yellow-500/50">[DATE/TIME]</span>.
+          on{" "}
+          <span className="bg-yellow-500/40 dark:bg-yellow-900/40 text-black dark:text-yellow-200 px-1 rounded">
+            [DATE/TIME]
+          </span>
+          .
         </p>
       </div>
     ),
@@ -395,7 +433,7 @@ export const stages = {
       "Get Access to DM",
       "DM Identified",
       "DM Reached",
-      "Show Value",
+      "Value Proposition",
       "Schedule Meeting",
       "Confirm Access",
       "Capture Contact Info",
@@ -430,7 +468,7 @@ export const stages = {
       "Get Access to DM",
       "DM Identified",
       "DM Reached",
-      "Show Value",
+      "Value Proposition",
       "Schedule Meeting",
       "Confirm Access",
       "Capture Contact Info",
@@ -525,7 +563,7 @@ export const stages = {
     script: (
       <div className="space-y-1">
         <p>
-          <h1 className="px-2 py-1 bg-yellow-600/50 text-black font-bold rounded-lg">
+          <h1 className="px-2 py-1 bg-yellow-500/40 dark:bg-yellow-900/40 text-black dark:text-yellow-200 font-bold rounded-lg">
             Option 1
           </h1>
           Totally fair.
@@ -539,7 +577,7 @@ export const stages = {
         <hr />
 
         <p>
-          <h1 className="px-2 py-1 bg-yellow-600/50 text-black font-bold rounded-lg">
+          <h1 className="px-2 py-1 bg-yellow-500/40 dark:bg-yellow-900/40 text-black dark:text-yellow-200 font-bold rounded-lg">
             Option 2
           </h1>
           I completely understand.
@@ -550,7 +588,7 @@ export const stages = {
         <hr />
 
         <p>
-          <h1 className="px-2 py-1 bg-yellow-600/50 text-black font-bold rounded-lg">
+          <h1 className="px-2 py-1 bg-yellow-500/40 dark:bg-yellow-900/40 text-black dark:text-yellow-200 font-bold rounded-lg">
             Option 3
           </h1>
           I understand.
@@ -582,7 +620,7 @@ export const stages = {
 
     script: (
       <div>
-        <h1 className="px-2 py-1 bg-yellow-600/50 text-black font-bold rounded-lg">
+        <h1 className="px-2 py-1 bg-yellow-500/40 dark:bg-yellow-900/40 text-black dark:text-yellow-200 font-bold rounded-lg">
           Option 1 - DM is Busy
         </h1>
         I completely understand. Most restaurant owners I speak with are busy.
@@ -591,7 +629,7 @@ export const stages = {
         for you.
         <hr className="my-4" />
         <p>
-          <h1 className="px-2 py-1 bg-yellow-600/50 text-black font-bold rounded-lg">
+          <h1 className="px-2 py-1 bg-yellow-500/40 dark:bg-yellow-900/40 text-black dark:text-yellow-200 font-bold rounded-lg">
             Option 2 - Future Time
           </h1>
           No problem at all. Sounds like today isn't ideal.
@@ -599,7 +637,7 @@ export const stages = {
         </p>
         <hr className="my-4" />
         <p>
-          <h1 className="px-2 py-1 bg-yellow-600/50 text-black font-bold rounded-lg">
+          <h1 className="px-2 py-1 bg-yellow-500/40 dark:bg-yellow-900/40 text-black dark:text-yellow-200 font-bold rounded-lg">
             Option 3 - Business Benefit
           </h1>
           I understand. A lot of the owners we work with were looking for ways
@@ -631,7 +669,7 @@ export const stages = {
 
     script: (
       <div>
-        <h1 className="px-2 py-1 bg-yellow-600/50 text-black font-bold rounded-lg">
+        <h1 className="px-2 py-1 bg-yellow-500/40 dark:bg-yellow-900/40 text-black dark:text-yellow-200 font-bold rounded-lg">
           Option 1 - Email + Meeting Absolutely
         </h1>
         I will send that over. The email gives a high-level overview. The reason
@@ -639,7 +677,7 @@ export const stages = {
         your restaurant.
         <hr className="my-4" />
         <p>
-          <h1 className="px-2 py-1 bg-yellow-600/50 text-black font-bold rounded-lg">
+          <h1 className="px-2 py-1 bg-yellow-500/40 dark:bg-yellow-900/40 text-black dark:text-yellow-200 font-bold rounded-lg">
             Option 2 - Review Then Meet
           </h1>
           sure i will send you an email right now
@@ -649,7 +687,7 @@ export const stages = {
         </p>
         <hr className="my-4" />
         <p>
-          <h1 className="px-2 py-1 bg-yellow-600/50 text-black font-bold rounded-lg">
+          <h1 className="px-2 py-1 bg-yellow-500/40 dark:bg-yellow-900/40 text-black dark:text-yellow-200 font-bold rounded-lg">
             <strong>Option 3 - Informational Positioning</strong>
           </h1>
           Of course. The email covers the basics.
@@ -681,7 +719,7 @@ export const stages = {
 
     script: (
       <div>
-        <h1 className="px-2 py-1 bg-yellow-600/50 text-black font-bold rounded-lg">
+        <h1 className="px-2 py-1 bg-yellow-500/40 dark:bg-yellow-900/40 text-black dark:text-yellow-200 font-bold rounded-lg">
           Option 1 - Customer Ownership
         </h1>
         Many of our partners already have online ordering. The difference is
@@ -689,7 +727,7 @@ export const stages = {
         and data instead of relying entirely on third-party platforms.
         <hr className="my-4" />
         <p>
-          <h1 className="px-2 py-1 bg-yellow-600/50 text-black font-bold rounded-lg">
+          <h1 className="px-2 py-1 bg-yellow-500/40 dark:bg-yellow-900/40 text-black dark:text-yellow-200 font-bold rounded-lg">
             Option 2 - Direct Order Growth
           </h1>
           Thats actually good. but The difference is that we're focused on
@@ -719,7 +757,7 @@ export const stages = {
 
     script: (
       <div>
-        <h1 className="px-2 py-1 bg-yellow-600/50 text-black font-bold rounded-lg">
+        <h1 className="px-2 py-1 bg-yellow-500/40 dark:bg-yellow-900/40 text-black dark:text-yellow-200 font-bold rounded-lg">
           Option 1 - Customer Data That's great.
         </h1>
         Many of our partners use DoorDash and Uber Eats. The difference is
@@ -727,7 +765,7 @@ export const stages = {
         to it.
         <hr className="my-4" />
         <p>
-          <h1 className="px-2 py-1 bg-yellow-600/50 text-black font-bold rounded-lg">
+          <h1 className="px-2 py-1 bg-yellow-500/40 dark:bg-yellow-900/40 text-black dark:text-yellow-200 font-bold rounded-lg">
             Option 2 - Direct Orders
           </h1>
           Most of our restaurant partners use those platforms.
@@ -737,7 +775,7 @@ export const stages = {
         </p>
         <hr className="my-4" />
         <p>
-          <h1 className="px-2 py-1 bg-yellow-600/50 text-black font-bold rounded-lg">
+          <h1 className="px-2 py-1 bg-yellow-500/40 dark:bg-yellow-900/40 text-black dark:text-yellow-200 font-bold rounded-lg">
             Option 3 - Reduce Dependency
           </h1>
           A lot of our partners use third-party delivery apps.
@@ -769,14 +807,14 @@ export const stages = {
 
     script: (
       <div>
-        <h1 className="px-2 py-1 bg-yellow-600/50 text-black font-bold rounded-lg">
+        <h1 className="px-2 py-1 bg-yellow-500/40 dark:bg-yellow-900/40 text-black dark:text-yellow-200 font-bold rounded-lg">
           Option 1 - Discovery First
         </h1>
         That's a great question. It really depends on what makes sense for your
         restaurant. The purpose of the meeting is to determine that.
         <hr className="my-4" />
         <p>
-          <h1 className="px-2 py-1 bg-yellow-600/50 text-black font-bold rounded-lg">
+          <h1 className="px-2 py-1 bg-yellow-500/40 dark:bg-yellow-900/40 text-black dark:text-yellow-200 font-bold rounded-lg">
             Option 2 - No Commitment
           </h1>
           I'm not asking you to commit to anything today.
@@ -786,7 +824,7 @@ export const stages = {
         </p>
         <hr className="my-4" />
         <p>
-          <h1 className="px-2 py-1 bg-yellow-600/50 text-black font-bold rounded-lg">
+          <h1 className="px-2 py-1 bg-yellow-500/40 dark:bg-yellow-900/40 text-black dark:text-yellow-200 font-bold rounded-lg">
             Option 3 - Informed Decision
           </h1>
           The goal of the conversation is to help you determine whether it would
@@ -818,13 +856,13 @@ export const stages = {
 
     script: (
       <div>
-        <h1 className="px-2 py-1 bg-yellow-600/50 text-black font-bold rounded-lg">
+        <h1 className="px-2 py-1 bg-yellow-500/40 dark:bg-yellow-900/40 text-black dark:text-yellow-200 font-bold rounded-lg">
           Option 1 - Growth Story
         </h1>
         I completely understand. A lot has changed since then.
         <hr className="my-4" />
         <p>
-          <h1 className="px-2 py-1 bg-yellow-600/50 text-black font-bold rounded-lg">
+          <h1 className="px-2 py-1 bg-yellow-500/40 dark:bg-yellow-900/40 text-black dark:text-yellow-200 font-bold rounded-lg">
             Option 2 - Increased Demand
           </h1>
           <br />
@@ -833,7 +871,7 @@ export const stages = {
         </p>
         <hr className="my-4" />
         <p>
-          <h1 className="px-2 py-1 bg-yellow-600/50 text-black font-bold rounded-lg">
+          <h1 className="px-2 py-1 bg-yellow-500/40 dark:bg-yellow-900/40 text-black dark:text-yellow-200 font-bold rounded-lg">
             Option 3 - Why We're Calling Again
           </h1>
           <br />
@@ -865,14 +903,14 @@ export const stages = {
 
     script: (
       <div>
-        <h1 className="px-2 py-1 bg-yellow-600/50 text-black font-bold rounded-lg">
+        <h1 className="px-2 py-1 bg-yellow-500/40 dark:bg-yellow-900/40 text-black dark:text-yellow-200 font-bold rounded-lg">
           Option 1 - Credibility
         </h1>
         That's completely fair. We've been helping independent restaurants for
         more than 10 years....
         <hr className="my-4" />
         <p>
-          <h1 className="px-2 py-1 bg-yellow-600/50 text-black font-bold rounded-lg">
+          <h1 className="px-2 py-1 bg-yellow-500/40 dark:bg-yellow-900/40 text-black dark:text-yellow-200 font-bold rounded-lg">
             Option 2 - Scale
           </h1>
           No worries. We currently work with over 15,000 restaurants
@@ -880,7 +918,7 @@ export const stages = {
         </p>
         <hr className="my-4" />
         <p>
-          <h1 className="px-2 py-1 bg-yellow-600/50 text-black font-bold rounded-lg">
+          <h1 className="px-2 py-1 bg-yellow-500/40 dark:bg-yellow-900/40 text-black dark:text-yellow-200 font-bold rounded-lg">
             Option 3 - Local Expansion
           </h1>
           That's actually one of the reasons I'm calling.
@@ -906,3 +944,50 @@ export const stages = {
     ],
   },
 };
+
+export const checklistItems = [
+  "Get Access to DM",
+  "DM Identified",
+  "Set A Callback",
+  "DM Reached",
+  "Value Proposition",
+  "Schedule Meeting",
+  "Confirm Access",
+  "Capture Contact Info",
+  "Confirm Schedule",
+];
+
+export const objections_actions = [
+  {
+    label: "Not Interested",
+    next: "obj_not_interested",
+  },
+  {
+    label: "Too Busy",
+    next: "obj_too_busy",
+  },
+  {
+    label: "Send Email",
+    next: "obj_send_email",
+  },
+  {
+    label: "Already Have Online Ordering",
+    next: "obj_online_ordering",
+  },
+  {
+    label: "Use DoorDash/UberEats",
+    next: "obj_competitor",
+  },
+  {
+    label: "How Much Does It Cost?",
+    next: "obj_price",
+  },
+  {
+    label: "Bad Experience With BM",
+    next: "obj_bad_experience",
+  },
+  {
+    label: "Never Heard Of BM",
+    next: "obj_never_heard",
+  },
+];
