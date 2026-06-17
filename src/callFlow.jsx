@@ -160,23 +160,23 @@ export const stages = {
       <div>
         <p>
           I know you're probably busy right now, so I'll just give you a quick
-          15 second run down so you know why I'm calling and after maybe we can
+          15-second rundown so you know why I'm calling, and after maybe we can
           set up another time to talk.
           <br />
-          Beyond Menu started over 10 years ago and we have grown to include
+          Beyond Menu started over 10 years ago, and we have grown to include
           over 15,000 restaurants.
           <br />
           We help customers find restaurants like yours.
           <br />
-          and we have over 12 million active customers who are always looing for
-          new places to order from.
+          And we have over 12 million active customers who are always looking
+          for new places to order from.
           <br />
-          and acualy We are expanding into{" "}
+          And actually, we are expanding into{" "}
           <span className="bg-yellow-500/40 dark:bg-yellow-900/40 text-black dark:text-yellow-200 px-1 rounded">
             [CITY AREA]
           </span>{" "}
-          so are looking to parner with the most desirable restaurants in the
-          area.
+          so we are looking to partner with the most desirable restaurants in
+          the area.
           <br />
           We currently work with places like{" "}
           <span className="bg-yellow-500/40 dark:bg-yellow-900/40 text-black dark:text-yellow-200 px-1 rounded">
@@ -191,7 +191,7 @@ export const stages = {
           <span className="bg-yellow-500/40 dark:bg-yellow-900/40 text-black dark:text-yellow-200 px-1 rounded">
             [RESTAURANT NAME]
           </span>{" "}
-          and thought Beyond Menu would be a great fit for you thats is way i
+          and thought Beyond Menu would be a great fit for you. That is why I
           want to extend an invitation.
         </p>
       </div>
